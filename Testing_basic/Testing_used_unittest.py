@@ -8,18 +8,18 @@ class Library:
         self.books = set()
 
 
-def add_book(self, title):
-    self.books.add(title)
+    def add_book(self, title):
+        self.books.add(title)
 
 
-def remove_book(self, title):
-    if title not in self.books:
-        raise BookNotFoundError()
-    self.books.remove(title)
+    def remove_book(self, title):
+        if title not in self.books:
+            raise BookNotFoundError()
+        self.books.remove(title)
 
 
-def list_books(self):
-    return list(self.books)
+    def list_books(self):
+        return list(self.books)
 
 
 # Код тестирования:
@@ -41,9 +41,9 @@ class TestLibrary(unittest.TestCase):
                          self.library.list_books())
 
 
-def test_remove_nonexistent_book(self):
-    with self.assertRaises(BookNotFoundError):
-        self.library.remove_book("Nonexistent Book")
+    def test_remove_nonexistent_book(self):
+        with self.assertRaises(BookNotFoundError):
+            self.library.remove_book("Nonexistent Book")
 
 
 if __name__ == '__main__':
